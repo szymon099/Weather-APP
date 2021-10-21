@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#app-container {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 140, 255);
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.time {
+    height: 40px;
+    font-size: 30px;
+}
+
+div#search {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+input#city {
+    border: 2px black solid;
+    border-radius: 5px;
+    width: calc(100% - 45px);
+    height: 40px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+button#search {
+    cursor: pointer;
+    background: transparent;
+    border: 2px black solid;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+button#search img {
+    max-height: 30px;
+    max-height: 30px;
+}
+
+.city {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.temp {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.ico {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.wind,
+.cloud {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wind img,
+.cloud img {
+    width: 30px;
+    margin: 10px;
+}
+
+.sunrise {
+    padding: 15px;
+}
+
+@media (min-width: 500px) {
+    #app-container {
+        width: 500px;
+        border-radius: 15px;
+        border: 2px solid black
+    }
+}
