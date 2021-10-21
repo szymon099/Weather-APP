@@ -1,4 +1,4 @@
-// You must write Your API KEY 
+// You must write Your API KEY from openweathermap.org
 // \/ \/ \/
 const apiKey = ;
 
