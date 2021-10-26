@@ -1,6 +1,6 @@
 // You must write Your API KEY from openweathermap.org
 // \/ \/ \/
-const apiKey = "";
+const apiKey = "2dcfca943abf238a3e3639d49c212961";
 
 Time();
 
