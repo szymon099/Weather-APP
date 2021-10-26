@@ -14,22 +14,28 @@
 
 <body>
     <div id="app-container">
-        <span class="time"></span>
+        <div id="up_section">
+            <span class="time"></span>
+            <div id="search">
+                <input type="text" id="city" value="" placeholder="Write city" onchange="searchWeather()">
+                <button id="search" onclick="searchWeather()"><img
+                        src="https://img.icons8.com/ios-filled/50/000000/search--v1.png"></button>
 
-        <div id="search">
-            <input type="text" id="city" value="" placeholder="Write city">
-            <button id="search"><img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png"></button>
-
+            </div>
+            <div id="temp">
+                <span class="city">Weather app by szymon099</span>
+                <span class="temp"></span>
+            </div>
         </div>
-        <span class="city">Weather app by szymon099</span>
-        <span class="temp"></span>
-        <span class="clouds"></span>
-        <span class="ico">
-            <span class="wind"></span>
-            <span class="cloud"></span>
-        </span>
-        <span class="sunrise"></span>
-        <span class="sunset"></span>
+
+        <div id="down_section">
+            <span class="ico">
+                <span class="wind"></span>
+                <span class="cloud"></span>
+            </span>
+            <span class="sunrise"></span>
+            <span class="sunset"></span>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>

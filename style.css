@@ -1,98 +1,190 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body::before {
+  height: 100%;
+  background-image: url(background/main.png);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  filter: blur(2px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #app-container {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 140, 255);
-    padding: 20px;
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    text-align: center;
+  background-size: cover;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0, 0);
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .time {
-    height: 40px;
-    font-size: 30px;
+  margin: 0 auto;
+  width: 200px;
+  line-height: 40px;
+  font-size: 30px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 div#search {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
 }
 
-
 input#city {
-    border: 2px black solid;
-    border-radius: 5px;
-    width: calc(100% - 45px);
-    height: 40px;
-    font-size: 25px;
-    padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px black solid;
+  border-radius: 5px;
+  width: calc(100% - 45px);
+  height: 40px;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
 button#search {
-    cursor: pointer;
-    background: transparent;
-    border: 2px black solid;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  background: transparent;
+  border: 2px black solid;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 
 button#search img {
-    max-height: 30px;
-    max-height: 30px;
+  max-height: 30px;
+  max-height: 30px;
+}
+
+button#search:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+#temp {
+  display: flex;
+  flex-direction: column;
 }
 
 .city {
-    padding: 10px;
-    font-size: 30px;
-    font-weight: 400;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .temp {
-    font-size: 60px;
-    font-weight: 500;
+  font-size: 60px;
+  font-weight: 500;
 }
 
 .ico {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-evenly;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
 }
 
 .wind,
 .cloud {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wind img,
 .cloud img {
-    width: 30px;
-    margin: 10px;
+  width: 30px;
+  margin: 10px;
 }
 
-.sunrise {
-    padding: 15px;
+.sunrise,
+.sunset {
+  display: block;
+  width: 100%;
+  text-align: center;
+  max-height: 50px;
+}
+
+#up_section {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 50%;
+}
+
+#down_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  bottom: 0;
+  line-height: 200%;
+}
+
+#temp,
+#down_section {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+/* .day {
+    background-image: url("https://image.freepik.com/free-vector/flat-design-beautiful-landscape_23-2149109890.jpg");
+}
+
+.night {
+    background-image: url("https://image.freepik.com/free-vector/night-starry-sky-background_23-2148052059.jpg");
+    color: white;
+} */
+
+.clearbg {
+  background-image: url(background/clear.jpg);
+}
+
+.cloudsbg {
+  background-image: url(background/cloudy.jpg);
+}
+
+.snowbg {
+  background-image: url(background/snow.jpg);
+}
+
+.rainbg {
+  background-image: url(background/rain.jpg);
+}
+
+.thunderstormbg {
+  background-image: url(background/thunderstorm.jpg);
+}
+
+.mistbg {
+  background-image: url(background/mist.jpg);
 }
 
 @media (min-width: 500px) {
-    #app-container {
-        width: 500px;
-        border-radius: 15px;
-        border: 2px solid black
-    }
+  #app-container {
+    width: 500px;
+    border-radius: 15px;
+    border: 2px solid black;
+  }
 }
