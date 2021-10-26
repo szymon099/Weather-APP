@@ -101,15 +101,14 @@ function searchWeather() {
   }
 }
 
-// Use onchange and onclick in html file
 
-// search.addEventListener('click', function () {
-//     searchWeather();
-// })
+search.addEventListener("click", function () {
+  searchWeather();
+});
 
-// input.addEventListener("keyup", function (event) {
-//     if (event.keyCode === 13) {
-//         event.preventDefault();
-//         search.click();
-//     }
-// });
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    search.click();
+  }
+});
